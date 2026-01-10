@@ -1,0 +1,20 @@
+Warning: 'transfer' is deprecated and scheduled for removal. Use 'call{value: <amount>}("")' instead.
+  --> input.sol:10:3:
+   |
+10 | 		a.transfer(x);
+   | 		^^^^^^^^^^
+
+Warning: CHC: Underflow (resulting value less than 0) happens here.
+Counterexample:
+arr = []
+a = 0x0
+x = 0
+
+Transaction trace:
+test.constructor()
+State: arr = []
+test.f(0x0, 0)
+ --> input.sol:7:3:
+  |
+7 | 		--x;
+  | 		^^^
